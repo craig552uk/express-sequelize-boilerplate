@@ -1,19 +1,19 @@
-var HTTPError = require('http-errors');
-var router    = require('express').Router();
+var HTTPError = require('http-errors')
+var router    = require('express').Router()
 
 // 200 response (with unicode)
-router.all('/ping/',   (req, res) => res.send('♥ pong ♥'));
+router.all('/ping/',   (req, res) => res.send('♥ pong ♥'))
 
 // Redirect response
-router.all('/redir/',  (req, res) => res.redirect(301, 'https://google.com'));
+router.all('/redir/',  (req, res) => res.redirect(301, 'https://google.com'))
 
 // Thrown Error response
-router.all('/error/',  (req, res) => { throw Error("Oh Crap!")});
+router.all('/error/',  (req, res) => { throw Error("Oh Crap!")})
 
 // HTTP Error response
-router.all('/teapot/', (req, res) => res.jsonp(HTTPError.ImATeapot()));
+router.all('/teapot/', (req, res) => res.jsonp(HTTPError.ImATeapot()))
 
 // JSON response
-router.all('/hello/',  (req, res) => res.jsonp("😃 Hello API! 😃") );
+router.all('/hello/',  (req, res) => res.jsonp("😃 Hello API! 😃") )
 
-module.exports = router;
+module.exports = router
