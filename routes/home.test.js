@@ -1,6 +1,5 @@
 var app = require('supertest')(require('../lib/app'))
 
-
 describe('Home Routes', () => {
 
     describe('GET /redir', () => {
@@ -13,7 +12,7 @@ describe('Home Routes', () => {
     })
 
     describe('GET /ping', () => {
-        it('should return jsonp data response', done => {
+        it('should return HTML response', done => {
             app.get('/ping')
             .expect(200)
             .expect('Content-Type', /html/)
