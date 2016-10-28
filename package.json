@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Craig Russell <craig.russell@cloudcall.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "aargs": "^1.0.6",
+    "body-parser": "^1.15.2",
+    "bunyan": "^1.8.4",
+    "express": "^4.14.0"
+  }
 }

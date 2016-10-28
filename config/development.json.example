@@ -1,0 +1,9 @@
+{
+    "database": {
+        "dialect": "sqlite",
+        "storage": "sqlite.db"
+    },
+    "logger": {
+        "level": "debug"
+    }
+}
