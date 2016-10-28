@@ -4,7 +4,7 @@
  * Create a record in the database
  * Specify model name and attributes as CLI arguments
  *
- * npm run add:record --model=User --name="Jim Jones"
+ * ./bin/find_model.js --model=User --name="Jim Jones"
 */
 
 // Get CLI args
