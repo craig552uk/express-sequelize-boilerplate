@@ -4,7 +4,7 @@
   "description": "A boilerplate for an Express and Sequelize project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test mocha **/**.test.js"
   },
   "author": "Craig Russell <craig.russell@cloudcall.com>",
   "license": "ISC",
@@ -13,5 +13,8 @@
     "body-parser": "^1.15.2",
     "bunyan": "^1.8.4",
     "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "supertest": "^2.0.1"
   }
 }
