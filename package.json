@@ -4,8 +4,11 @@
   "description": "A boilerplate for an Express and Sequelize project",
   "main": "index.js",
   "scripts": {
-    "install:globals": "npm install -g bunyan nodemon mocha",
-    "test": "NODE_ENV=test mocha **/**.test.js"
+    "start": "nodemon index.js | bunyan -o short",
+    "install:globals": "npm install -g bunyan nodemon mocha sequelize-cli",
+    "migration": "sequelize --config config/sequelize.js db:migrate",
+    "migration:create": "sequelize --config config/sequelize.js migration:create",
+    "test": "rm -f test.db && NODE_ENV=test npm run migration && NODE_ENV=test mocha **/**.test.js"
   },
   "author": "Craig Russell <craig.russell@cloudcall.com>",
   "license": "ISC",
@@ -13,9 +16,12 @@
     "aargs": "^1.0.6",
     "body-parser": "^1.15.2",
     "bunyan": "^1.8.4",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "sequelize": "^3.24.6"
   },
   "devDependencies": {
+    "faker": "^3.1.0",
+    "sqlite3": "^3.1.8",
     "supertest": "^2.0.1"
   }
 }
